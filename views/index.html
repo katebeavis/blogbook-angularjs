@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="BlogBook">
 <head>
   <title>BlogBook</title>
-</head>
-<body>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/angularApp.js"></script>
+  <script src="js/streamController.js"></script>
+</head>
+<body>
+  <div class="stream" ng-controller="streamController">
+    <ul>
+      <li class="items" ng-repeat="card in cards">{{card}}</li>
+    </ul>
+  </div>
+
 </body>
 </html>
