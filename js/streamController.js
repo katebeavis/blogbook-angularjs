@@ -1,5 +1,7 @@
-var streamController = function() {
-  document.write("Hello World!");
+var streamController = function($scope) {
+  $scope.helloWorld = function() {
+    console.log("hi");
+  };
 };
 
 angular
