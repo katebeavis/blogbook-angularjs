@@ -11,9 +11,7 @@ describe('blogbook homepage', function() {
 
   it('should show a blog post', function() {
     browser.get('http://localhost:3000/');
-    // var list = element.all(by.css('.items li'));
-    // expect(list.get(1).getText()).toBe("blog");
-    expect(element(by.css('li')).getText()).toBe("kaprianofox")
+    expect(element(by.css('h1')).getText()).toBe("This April in Blogging U.: The Return of Writing 101!")
   });
 
 });

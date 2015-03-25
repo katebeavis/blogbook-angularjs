@@ -17,6 +17,7 @@ var streamController = function($scope, $http) {
         console.log($scope.card);
       });
     };
+    $scope.callAPI();
 };
 
 angular
