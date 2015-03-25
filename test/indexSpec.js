@@ -7,6 +7,8 @@ describe('blogbook homepage', function() {
 
   });
 
+  // have to update the second test
+
   it('should show a blog post', function() {
     browser.get('http://localhost:3000/');
     // var list = element.all(by.css('.items li'));

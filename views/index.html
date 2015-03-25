@@ -10,13 +10,15 @@
 <body>
   <div class="stream" ng-controller="streamController">
     <ul>
-      <li class="items" ng-repeat="card in cards">
-        <h1>{{card.Title}}</h1>
-        <p>by {{card.Author}}</p>
-        <img ng-src="{{card.Photo}}" height="200" width="200"/>
-        <p>{{card.Text}}</p>
-        <a href="{{card.Link}}" target="_blank">Read more</a>
-
+      <li class="items" ng-model="card">
+        <button type="submit" ng-click="callAPI()">test</button>
+        <h1>{{card.title}}</h1>
+        <p>by {{card.author}}</p>
+        <p>on {{sample.posts[0].date}}</p>
+        <img ng-src="{{sample.posts[0].author.avatar_URL}}" height="200" width="200"/>
+        <p>{{sample.posts[0].content}}</p>
+        <p>{{sample.posts[0].URL}}</p>
+        <a href="" target="_blank">Read more</a>
 
       </li>
     </ul>
