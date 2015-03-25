@@ -1,6 +1,7 @@
 {
   "name": "blogbook",
   "version": "0.0.0",
+  "componentsDirectory": "public/",
   "homepage": "https://github.com/GruntingUnicorns/blogbook",
   "authors": [
     "tommasobratto <tbratto22@gmail.com>"
