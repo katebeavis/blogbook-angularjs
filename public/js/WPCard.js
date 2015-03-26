@@ -6,12 +6,12 @@ var wrapper = function($http){
       var self = this;
 
       blogData.then(function(response){
-        self.title = response.data.posts[0].title
-        self.date = Date(response.data.posts[0].date);
-        self.text = response.data.posts[0].excerpt
-        self.link = response.data.posts[0].URL
-        self.author = response.data.posts[0].author.nice_name
-        self.photo = response.data.posts[0].featured_image
+        self.title = response.data.posts[0].title;
+        self.date = response.data.posts[0].date;
+        self.text = response.data.posts[0].excerpt;
+        self.link = response.data.posts[0].URL;
+        self.author = response.data.posts[0].author.nice_name;
+        self.photo = response.data.posts[0].featured_image;
       });
     };
     this.initialize();

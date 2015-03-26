@@ -4,21 +4,12 @@ describe('blogbook homepage', function() {
     browser.get('http://localhost:3000/');
 
     expect(browser.getTitle()).toEqual('BlogBook');
-
   });
 
-  // // have to update the second test
+  it('should show the most recent post', function() {
+    browser.get('http://localhost:3000/');
 
-  // it('should show a blog post', function() {
-  //   browser.get('http://localhost:3000/');
-  //   expect(element(by.css('h1')).getText()).toBe("This April in Blogging U.: The Return of Writing 101!")
-  // });
-
-  it('should show the posts in chronological order', function() {
-    browser.get('http:/localhost:3000/');
-    expect(element(by.model('card.date'))).toEqual()
+    expect(element(by.id('date')).getText()).toEqual('on 2015-03-25T10:19:31+00:00');
   });
-
-
 
 });
