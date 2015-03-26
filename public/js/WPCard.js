@@ -11,8 +11,7 @@ var wrapper = function($http){
         self.text = response.data.posts[0].excerpt
         self.link = response.data.posts[0].URL
         self.author = response.data.posts[0].author.nice_name
-        self.photo = response.data.posts[0].featured_image || response.data.posts[0].attachments[Object.keys(response.data.posts[0].attachments)[0]].URL
-
+        self.photo = response.data.posts[0].featured_image || response.data.posts[0].attachments[Object.keys(response.data.posts[0].attachments)[0]].URL || ""
       });
     };
     this.initialize();
