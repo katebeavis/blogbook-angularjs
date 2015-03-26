@@ -24,12 +24,12 @@
 
     <ul ng-repeat="card in cards | orderBy:'date':true">
       <li class="items">
-        <h1>{{card.title}}</h1>
-        <p>by {{card.author}}</p>
-        <p id="date">on {{card.date}}</p>
+        <h1 class="title of post">{{card.title}}</h1>
+        <p class="author">by {{card.author}}</p>
+        <p class="date">on {{card.date}}</p>
         <img ng-src="{{card.photo}}" max-width="200"/>
-        <p>{{card.text}}}</p>
-        <a href="{{card.link}}" target="__blank">read more</a>
+        <p class="content">{{card.text}}}</p>
+        <a class="link of post" href="{{card.link}}" target="__blank">read more</a>
       </li>
     </ul>
   </div>
