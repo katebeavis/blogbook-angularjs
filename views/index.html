@@ -6,20 +6,30 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/angularApp.js"></script>
   <script src="js/streamController.js"></script>
-  <script src="js/wordpressCard.js"></script>
+  <script src="js/WPCard.js"></script>
 </head>
 <body>
   <div class="stream" ng-controller="streamController">
+    <form class="form-inline">
+      <input class="form-control" type="text" ng-model="newBlog" />
+      <button type="submit" class="btn btn-default" ng-click="addWPCard(newBlog)">Add a blog</button>
+    </form>
+
+    <h3>Choose a Blog</h3>
     <ul>
-      <li class="items">
-        <button type="submit">test</button>
+      <li ng-repeat="blog in blogs">
+        <a ng-click="addWPCard(blog)">{{blog}}</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="items" ng-repeat="card in cards">
         <h1>{{card.title}}</h1>
         <p>by {{card.author}}</p>
         <p>on {{card.date}}</p>
-        <img ng-src="{{card.avatar}}" height="200" width="200"/>
+        <img ng-src="{{card.photo}}" max-width="200"/>
         <p>{{card.text}}}</p>
-        <a href="{{card.postURL}}" target="__blank">read more</a>
-
+        <a href="{{card.link}}" target="__blank">read more</a>
       </li>
     </ul>
   </div>
