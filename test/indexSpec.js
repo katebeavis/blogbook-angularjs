@@ -1,7 +1,7 @@
 describe('blogbook homepage', function() {
 
   beforeEach( function() {
-    browser.get('http://localhost:3000/')
+    browser.get('http://localhost:3000/');
   })
 
   it('should have a title', function() {
@@ -9,11 +9,11 @@ describe('blogbook homepage', function() {
   });
 
   it('should show the most recent post', function() {
-    expect(element(by.css('.date')).getText()).toEqual('on 2015-03-25T10:19:31+00:00');
+    expect(element.all(by.id('date')).first().getText()).toEqual('on 2015-03-25T10:19:31+00:00');
   });
 
   it('should show the title of the post', function() {
-    expect(element(by.css('.title')).getText()).toEqual('Reflections: Context Switching');
+    expect(element.all(by.id('title')).first().getText()).toEqual('Reflections: Context Switching');
   });
 
 });
