@@ -1,1 +1,1 @@
-angular.module("BlogBook", ['ngResource'])
+angular.module("BlogBook", [])
