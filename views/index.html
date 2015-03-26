@@ -5,12 +5,14 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/custom_style.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/angularApp.js"></script>
   <script src="js/WPCard.js"></script>
   <script src="js/addLinkCtrl.js"></script>
   <script src="js/streamController.js"></script>
-  
+
 </head>
 <body>
   <div class="container-fluid">
@@ -25,6 +27,48 @@
       <div class="row">
         <ul class="new">
           <li class="items panel col-md-5 col-md-offset-5" ng-repeat="card in cards | orderBy:'date':!reverse">
+
+    <div class="row">
+      <div role="tabpanel" class="col-md-10">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" id="home-tab" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+          <li role="presentation"><a href="#profile" id="profile-tab" aria-controls="profile" role="tab" data-toggle="tab">Makers</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active bg-info" id="home">
+            <p>There are {{cards.length}} cool Makers Blogs</p>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="profile">
+
+
+            <div class="btn-group" data-toggle="buttons" ng-repeat="card in cards">
+              <label class="btn btn-primary active peoplebutton" ng-click="setFilter($index)" >
+                <input type="checkbox" autocomplete="off" checked> {{card.author}}
+              </label>
+            </div>
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="messages">...</div>
+          <div role="tabpanel" class="tab-pane" id="settings">...</div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+      <div class="row">
+        <ul class="new">
+          <li class="items panel col-md-5 col-md-offset-5" ng-repeat="card in cards | filter:filters |orderBy:'date':true">
             <h1>{{card.title}}</h1>
             <p>by {{card.author}}</p>
             <p>on {{card.date}}</p>
