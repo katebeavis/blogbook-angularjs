@@ -7,11 +7,18 @@ describe('blogbook homepage', function() {
 
   });
 
-  // have to update the second test
+  // // have to update the second test
 
-  it('should show a blog post', function() {
-    browser.get('http://localhost:3000/');
-    expect(element(by.css('h1')).getText()).toBe("This April in Blogging U.: The Return of Writing 101!")
+  // it('should show a blog post', function() {
+  //   browser.get('http://localhost:3000/');
+  //   expect(element(by.css('h1')).getText()).toBe("This April in Blogging U.: The Return of Writing 101!")
+  // });
+
+  it('should show the posts in chronological order', function() {
+    browser.get('http:/localhost:3000/');
+    expect(element(by.model('card.date'))).toEqual()
   });
+
+
 
 });

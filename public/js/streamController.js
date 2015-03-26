@@ -7,6 +7,13 @@ var streamController = function($scope, WPCard) {
     $scope.cards.push(new WPCard(blog));
     $scope.newBlog = null;
   };
+  
+  $scope.loadCards = function() {
+    for(i = 0; i < $scope.blogs.length; i++) {
+      $scope.addWPCard($scope.blogs[i]);
+    };
+  };
+  $scope.loadCards();
 };
 
 angular
