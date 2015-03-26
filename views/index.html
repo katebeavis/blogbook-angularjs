@@ -2,6 +2,8 @@
 <html ng-app="BlogBook">
 <head>
   <title>BlogBook</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/custom_style.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="js/angularApp.js"></script>
@@ -11,29 +13,32 @@
   
 </head>
 <body>
-  <div class="stream" ng-controller="streamController">
-    <form class="form-inline">
-      <input class="form-control" type="text" ng-model="newBlog" />
-      <button type="submit" class="btn btn-default" ng-click="addWPCard(newBlog)">Add a blog</button>
-    </form>
+  <div class="container-fluid">
+    <div class="stream" ng-controller="streamController">
+      <form class="form-inline">
+        <input class="form-control" type="text" ng-model="newBlog" />
+        <button type="submit" class="btn btn-default" ng-click="addWPCard(newBlog)">Add a blog</button>
+      </form>
 
-    <h3>Choose a Blog</h3>
-    <ul>
-      <li ng-repeat="blog in blogs">
-        <a ng-click="addWPCard(blog)">{{blog}}</a>
-      </li>
-    </ul>
-
-    <ul>
-      <li class="items" ng-repeat="card in cards">
-        <h1>{{card.title}}</h1>
-        <p>by {{card.author}}</p>
-        <p>on {{card.date}}</p>
-        <img ng-src="{{card.photo}}" max-width="200"/>
-        <p>{{card.text}}}</p>
-        <a href="{{card.link}}" target="__blank">read more</a>
-      </li>
-    </ul>
+      <h3>Choose a Blog</h3>
+      <ul>
+        <li ng-repeat="blog in blogs">
+          <a ng-click="addWPCard(blog)">{{blog}}</a>
+        </li>
+      </ul>
+      <div class="row">
+        <ul class="new">
+          <li class="items panel col-md-5 col-md-offset-5" ng-repeat="card in cards">
+            <h1>{{card.title}}</h1>
+            <p>by {{card.author}}</p>
+            <p>on {{card.date}}</p>
+            <img ng-src="{{card.photo}}" max-width="200"/>
+            <p>{{card.text}}}</p>
+            <a href="{{card.link}}" target="__blank">read more</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 </body>
