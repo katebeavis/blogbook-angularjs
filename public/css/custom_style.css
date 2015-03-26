@@ -7,3 +7,7 @@
 body{
   background-color: #eee;
 }
+
+img.featured-image {
+  width: 100%;
+}
