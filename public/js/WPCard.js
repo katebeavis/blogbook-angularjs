@@ -7,8 +7,8 @@ var wrapper = function($http){
 
       blogData.then(function(response){
         self.title = response.data.posts[index].title
-        self.date = response.data.posts[index].date
-        self.text = response.data.posts[index].excerpt
+        self.date = new Date(response.data.posts[index].date).toDateString();
+        self.text = response.data.posts[index].excerpt.replace(/(<([^>]+)>)/ig,"");
         self.link = response.data.posts[index].URL
         self.author = response.data.posts[index].author.nice_name
         self.photo = response.data.posts[index].featured_image || response.data.posts[index].attachments[Object.keys(response.data.posts[index].attachments)[0]].URL || ""
