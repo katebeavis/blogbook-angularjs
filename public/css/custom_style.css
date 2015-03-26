@@ -1,0 +1,9 @@
+.items{
+  list-style-type: none;
+  margin: auto;
+  padding-right: 10px;
+}
+
+body{
+  background-color: #eee;
+}
