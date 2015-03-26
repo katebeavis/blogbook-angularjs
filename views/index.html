@@ -19,10 +19,12 @@
         <input class="form-control" type="text" ng-model="newBlog" />
         <button type="submit" class="btn btn-default" ng-click="addWPCard(newBlog)">Add a blog</button>
       </form>
-      
+      <!-- buttons added for testing -->
+      <button ng-click="reverse=true">Sort By reverse Chron</button>
+      <button ng-click="reverse=false">Sort By Chron</button>
       <div class="row">
         <ul class="new">
-          <li class="items panel col-md-5 col-md-offset-5" ng-repeat="card in cards | orderBy:'date':true">
+          <li class="items panel col-md-5 col-md-offset-5" ng-repeat="card in cards | orderBy:'date':!reverse">
             <h1>{{card.title}}</h1>
             <p>by {{card.author}}</p>
             <p>on {{card.date}}</p>
