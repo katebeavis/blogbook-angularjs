@@ -25,6 +25,11 @@ var streamController = function($scope, WPCard) {
   $scope.setFilter = function(index){
     $scope.filters = {author: $scope.cards[index].author}
   };
+
+  $scope.resetFilter = function(){
+    $scope.filters = {};
+  };
+
 };
 
 angular
