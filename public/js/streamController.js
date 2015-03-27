@@ -1,11 +1,10 @@
 var streamController = function($scope, WPCard) {
   $scope.cards = [];
   $scope.filters = {}
-  $scope.blogs = ['katebeavis.wordpress.com', 'joejknowles.wordpress.com', 'detachedhead.wordpress.com', 'thegeekleapforward.wordpress.com', 'en.blog.wordpress.com'];
+  $scope.blogs = ['katebeavis.wordpress.com', 'joejknowles.wordpress.com', 'detachedhead.wordpress.com', 'thegeekleapforward.wordpress.com', 'en.blog.wordpress.com', 'em01blog.wordpress.com', 'sevenhoursbehind.wordpress.com', 'meganfolsom.wordpress.com', 'niccipell.wordpress.com'];
 
   $scope.addWPCard = function(blog){
     $scope.cards.push(new WPCard(blog, 0));
-    $scope.cards.push(new WPCard(blog, 1));
   };
 
  $scope.allPosts = function(blog){
