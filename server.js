@@ -4,6 +4,7 @@ var server = require('http').createServer(app);
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
