@@ -1,0 +1,39 @@
+body{
+ background-color: #eee;
+}
+
+.block{
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+
+}
+
+.panel {
+  background-color: #eee;
+}
+
+img.featured-image {
+  width: 100%;
+}
+
+.peoplebutton{
+margin: 1em;
+}
+
+img.pic{
+  width: 100%;
+}
+
+.title{
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+
+
+
+
+

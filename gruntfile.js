@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['gruntfile.js', 'public/**/*.js', 'routes/*.js', 'test/**.js']
+      files: ['gruntfile.js', 'public/*.js', 'public/js/*.js', 'routes/*.js', 'test/**.js']
     },
 
     watch: {
