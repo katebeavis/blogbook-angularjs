@@ -1,1 +1,4 @@
-#BlogBook
+# BlogBook
+npm install
+bower install
+node server.js
