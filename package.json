@@ -26,7 +26,6 @@
   "scripts": {
     "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
     "start": "node server.js",
-    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
